@@ -153,8 +153,6 @@ div:has(> #menu.open) {
 }
 
 .dnld-btn {
-  position: relative;
-  opacity: 1;
   cursor: pointer;
   transition-duration: 100ms;
 }

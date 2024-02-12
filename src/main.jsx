@@ -6,8 +6,6 @@ import {GeneralContextProvider} from './context/GeneralContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <GeneralContextProvider>
-    <React.StrictMode>
       <App />
-    </React.StrictMode>
   </GeneralContextProvider>,
 )

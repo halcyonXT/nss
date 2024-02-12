@@ -147,19 +147,19 @@ function App() {
             <div className='flex w-full bd-blur h-max flex-col absolute top-[calc(4rem+1px)] basis-auto'>
                 
                 <div id="menu" className={`w-full bd-blur z-50 box-content pt-4 lg:hidden flex flex-col justify-between items-start gap-4 duration-150 ${menu ? "open" : "closed"}`}>
-                    <button className='flex items-center gap-1 f-main font-normal text-lg text-[var(--accent)] w-[95%] ml-[2.5%] text-left duration-75 hover:indent-1'>
+                    <button onClick={() => goTo("#mods")} className='flex items-center gap-1 f-main font-normal text-lg text-[var(--accent)] w-[95%] ml-[2.5%] text-left duration-75 hover:indent-1'>
                         <Svg name="mods" height="1.1rem"/>
                         Mods
                     </button>
-                    <button className='flex items-center gap-1 f-main font-normal text-lg text-[var(--accent)] w-[95%] ml-[2.5%] text-left duration-75 hover:indent-1'>
+                    <button onClick={() => goTo("#tools")} className='flex items-center gap-1 f-main font-normal text-lg text-[var(--accent)] w-[95%] ml-[2.5%] text-left duration-75 hover:indent-1'>
                         <Svg name="tools" height="1.1rem"/>
                         Tools
                     </button>
-                    <button className='flex items-center gap-1 f-main font-normal text-lg text-[var(--accent)] w-[95%] ml-[2.5%] text-left duration-75 hover:indent-1'>
+                    <button onClick={() => goTo("#servers")} className='flex items-center gap-1 f-main font-normal text-lg text-[var(--accent)] w-[95%] ml-[2.5%] text-left duration-75 hover:indent-1'>
                         <Svg name="servers" height="1.1rem"/>
                         Servers
                     </button>
-                    <button className='flex items-center gap-1 f-main font-normal text-lg text-[var(--accent)] w-[95%] ml-[2.5%] text-left duration-75 hover:indent-1'>
+                    <button onClick={() => goTo("#contact")} className='flex items-center gap-1 f-main font-normal text-lg text-[var(--accent)] w-[95%] ml-[2.5%] text-left duration-75 hover:indent-1'>
                         <Svg name="contact" height="1.1rem"/>
                         Contact
                     </button>
