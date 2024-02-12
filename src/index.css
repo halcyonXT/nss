@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 0px; /* This will hide the scrollbar track */
+}
+
+/* For Firefox */
+/* Create a transparent track */
+/* Make the thumb thin and set the color */
+/* Note: Firefox requires 'overflow' property to be set */
+/* on the element for the scrollbar to appear */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #767676 transparent;
+}
+
+/* For Edge */
+/* Create a transparent track */
+/* Make the thumb thin and set the color */
+/* Note: Edge requires '-ms-overflow-style' property to be set */
+/* on the element for the scrollbar to appear */
+* {
+  overscroll-behavior: none;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: #767676 transparent;
+}
+
+body, html, #root {
+  width: 100%;
+  height: 100dvh;
+  overflow:hidden;
+}
+
+
+:root {
+  --accent: white;
+  --main: black;
+  --f-main: 'Montserrat', sans-serif;
+}
+
+.f-main {
+  font-family: var(--f-main);
+}
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.bd-blur {
+  backdrop-filter: blur(1.5rem) brightness(0.9);
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  height: 100%;
+}
+
+.blend {
+  background-blend-mode: luminosity;
+}
+
+.line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
